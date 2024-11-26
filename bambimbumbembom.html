@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florist Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="fontawesome5/fontawesome-free-6.6.0-web/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Prata&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        table, tr, th, td { 
+            border: 5px solid pink  ;
+            border-collapse: collapse;
+            height: 5px;
+            width: 500px;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+        th {
+            background-color: pink;
+            font-family: "Bitter", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: oblique;
+            color: rgb(219, 84, 75);    
+        }
+        td.a{
+            text-align: left;
+            vertical-align: center;
+            padding: 30px;
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 950;
+            font-style: oblique;
+        }
+        td.b{
+            text-align: center;
+            vertical-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 700;
+            font-style: oblique;
+        }
+        td.c{
+            text-align: center;
+            vertical-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 700;
+            font-style: oblique;
+        }
+        td.d{
+            text-align: center;
+            vertical-align: center;
+            font-family: "Space Mono", monospace;
+            font-weight: 400;
+            font-style: oblique;
+        }
+        td.e{
+            text-align: center;
+            vertical-align: center;
+            font-family: "Space Mono", monospace;
+            font-weight: 700;
+            font-style: oblique;
+        }
+        td:hover {
+            background-color: grey;
+        }
+        img {
+            border-radius: 6px;
+        }
+        img {
+            opacity: 0,1;
+        }
+        img:hover {
+            opacity: 1;
+        }
+        body{
+            background-image: url('breakfast1.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(219, 84, 75);
+  padding: 15px;
+  float: left;
+}
+
+a:hover {
+  background-color: burlywood;
+}
+body {
+  margin-top: 3%;
+}
+.main-header {
+    background-color: pink;
+    padding-left: 10px;
+     padding-top: 3px; 
+     padding-bottom: 3px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;    
+}
+
+.header-info {
+    text-align: center;
+    color: rgb(219, 84, 75);
+    padding: 0px;
+    margin: 14px;
+    position: absolute;
+    left: 0px;
+}
+.container {
+    display: flex;
+    flex-wrap: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab {
+    background-color: gainsboro;
+    width: 400px;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+h1.name {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: black;
+}
+h2.price {
+    font-size: 38px;
+    color: black;
+}
+
+.list {
+    list-style-type: disc;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.list li {
+    margin-top: 20px;
+    color: black;
+}
+
+hr {
+    height: 7px;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(219, 84, 75);
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+div.about {
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+           
+            background-color: blanchedalmond;
+            width: 90%;
+           
+}
+
+.about-content {
+            width: 45%;
+            padding: 20px;
+            
+        }
+        .activity-content {
+            width: 45%;
+            padding: 20px;
+        }
+        .image-section {
+          margin-left: 101px;
+          margin-right: 101px;
+            text-align: center;
+            background-color: blanchedalmond;
+          margin-bottom: 50px;
+      
+        }
+        img.about-us {
+          
+            height: 250px;
+        }
+
+        /* Style untuk konten di dalam "About Us" dan "Activity" */
+        h2 {
+            color: rgb(219, 84, 75);
+        }
+        p {
+            color: black;
+        }
+button {
+  background-color:rgb(219, 84, 75, 0.863);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 8px;
+  box-shadow: 0px 7px gainsboro;
+  cursor: pointer;
+  margin: 5px auto;
+  padding: 5px auto;
+  justify-content: center;
+
+}
+
+button:hover {
+  background-color: rgb(219, 84, 75);
+  color: white;
+  opacity: 0.7;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0px 4px gainsboro;
+}
+
+.diagonal {
+  width: 100px;
+ 
+}
+div.footer {
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+  margin-right: 1px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  background-color: blanchedalmond;
+  width: 100%;
+}
+.footer {
+  text-align: left;
+    color: black;
+    padding: 10px;
+    width: 100%;
+
+}
+div.image-footer {
+  margin-bottom: auto;
+    margin-top: auto;
+}
+img.kantor {
+  max-width: 100%;
+    max-height: 100%;
+    margin-left: 20px;
+    
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: antiquewhite;
+}
+
+.dropdown-item:hover {
+    background-color:whitesmoke ;
+    cursor: pointer;
+}
+
+a.dropdown-item {
+    min-width: 160px;
+    text-align: left;
+}
+
+li.dropdown-item:hover a.dropdown-item {
+    text-align: left;
+    color: gainsboro;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <h3 class="header-info">BamBimBumBemBom</h3>
+            <nav>
+              <div class="dropdown">
+                <div>
+                  <a href="bambimbumbembom.html"> Home </a>
+                </div>
+                <div class="dropdown-content">
+                  <ul>
+                    <li class="dropdown-item">
+                      <a class="dropdown-item" href="#products"> Product </a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="dropdown-item" href="#pricing-table"> Pricing Table </a>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>  
+              <a href="price.html">Price</a>
+              <a href="about.html">About Us</a>
+             </nav>
+          </div>
+    </header>
+    <table>
+      <section id="home">
+      <tr>
+          <th>Name</th>
+          <th>Color</th>
+          <th>Price</th>
+          <th>Image</th>
+      </tr>
+      <tr>
+          <td class="a">Lily</td>
+          <td class="a">White</td>
+          <td class="a">IDR 25.000/pcs</td>
+          <td class="a"><img src="Lily.jpeg" height="200" width="283"></td>
+      </tr>
+      <tr>
+          <td class="b">Rose</td>
+          <td class="b">White, Red, Pink</td>
+          <td class="b">IDR 10.000/pcs</td>
+          <td class="b"><img src="Rose.jpg" height="200"></td>
+      </tr>
+      <tr>
+          <td class="c">Tulip</td>
+          <td class="c">White</td>
+          <td class="c">IDR 20.000/pcs</td>
+          <td class="c"><img src="Tulip.jpg" height="200" width="283"></td>
+      </tr>
+      <tr>
+          <td class="d">Baby Breath</td>
+          <td class="d">White, Red, Blue, Yellow</td>
+          <td class="d">start from IDR 30.000/pcs</td>
+          <td class="d"><img src="BabyBreath.jpeg" height="200" width="283"></td>
+      </tr>
+      <tr>
+          <td class="e">Tamacetum</td>
+          <td class="e">White</td>
+          <td class="e">start from IDR 25.000/pcs</td>
+          <td class="e"><img src="tamacetum.jpg" height="200" width="283"></td>
+      </tr>
+      </section>
+  </table>
+
+    <section id="price">
+        <div class="container">
+          <div class="tab">
+            <div class="tab-header">
+              <div>
+              <center><h1 class="name">Basic</h1></center>
+              </div>
+              <div>
+                <center><h2 class="price"> >IDR30.000</h2></center>
+           </div>
+            </div>
+            <hr>
+            <ul class="list">
+              <li>Bouquet </li>
+              <li> <del> Decoration </del> </li>
+              <li> Vase </li>
+              <li> One flower type </li>
+              <li> Lily </li>
+              <li> Rose </li>
+              <li> Tulip </li>
+              <li> <del> Sunflower </del></li>
+              <li> <del> Baby breath </del> </li> 
+            </ul>
+            <center><button> Order Now </button></center>
+          </div>
+          <div class="tab">
+            <div class="tab-header">
+                  <div>
+                       <center><h1 class="name">Basic</h1></center>
+                  </div>
+                  <div>
+                       <center><h2 class="price"> >IDR30.000</h2></center>
+                  </div>
+            </div>
+                <hr>
+                <ul class="list">
+                  <li>Bouquet </li>
+                  <li> <del> Decoration </del> </li>
+                  <li> Vase </li>
+                  <li> One flower type </li>
+                  <li> Lily </li>
+                  <li> Rose </li>
+                  <li> Tulip </li>
+                  <li> <del> Sunflower </del></li>
+                  <li> <del> Baby breath </del> </li> 
+                </ul>
+                <center><button> Order Now</button></center>
+          </div>
+          <div class="tab">
+            <div class="tab-header">
+                  <div>
+                       <center><h1 class="name">Basic</h1></center>
+                  </div>
+                  <div>
+                       <Center><h2 class="price"> >IDR30.000</h2></Center>
+                  </div>
+            </div>
+                <hr>
+                <ul class="list">
+                  <li>Bouquet </li>
+                  <li> <del> Decoration </del> </li>
+                  <li> Vase </li>
+                  <li> One flower type </li>
+                  <li> Lily </li>
+                  <li> Rose </li>
+                  <li> Tulip </li>
+                  <li> <del> Sunflower </del></li>
+                  <li> <del> Baby breath </del> </li> 
+                </ul>
+                <center><button> Order Now</button></center>
+          </div>
+        </div>
+    </section>
+      <main>
+        <section id="about">
+          <div class="about">
+              <!-- About Us di sebelah kiri -->
+              <div class="about-content">
+                  <h2>About Us</h2>
+                  <p>A florist shop is a retail establishment that sells cut flowers and ornamental plants. The floral trade involves activities such as flower care, flower arranging, floral design, merchandising, and often flower delivery. Florist shops are an ever popular industry and one of the most searched guides on our website.</p>
+              </div>
+
+              <!-- Activity di sebelah kanan -->
+              <div class="activity-content">
+                  <h2>Activity</h2>
+                  <p>The retail florists are generally the pillar of many communities who look after a specific area for all their flowery needs. As a retail florists you will deal with many emotions in one specific day, such as joyful partners buying flowers to celebrate a new baby, a sibling or child remembering a parent's birthday at the last minute, or a partner making amends with a bouquet. These are just a few of the reasons why customers visit a florist shop.</p>
+              </div>
+          </div>
+
+          <!-- Gambar di bawah About Us dan Activity -->
+          <div class="image-section">
+              <img src="cat.jpg" alt="Cat Image" width="300px" height="auto" class="about-us">
+              <img src="adil.jpg" alt="adil image" width="300px" height="auto" class="about-us">
+              <img src="baby.jpg" alt="baby image" width="300px" height="auto" class="about-us">
+          </div>
+         </section>
+      </main>   
+    
+      <footer>
+        <section id="footer">
+          <div class="footer">
+            <div>
+                <h3 class="address"><i class="fas fa-map-marker-alt"></i>    Address : </h3>
+                <p class="address"> 18 Office Park Lt.22 Jl. TB Simatupang No.18, Kebagusan, Ps. Minggu,<br>
+                  Kota Jakarta Selatan, Daerah Khusus Ibu Kota Jakarta 12520</p>
+            <h3 class="contacts"><i class="far fa-address-card"></i>    Contact us : </h3>
+            <p class="contacts"><i class="fab fa-whatsapp-square"></i> Whatsapp/GSM : 0813-1234-1020 / 0888-9797-791<br> 
+            <i class="far fa-envelope"></i>Email : zack.aryasatya@gmail.com<br>
+            <i class="fab fa-instagram-square"></i>Instagram : robertaditya_<br>
+            <i class="fab fa-facebook-square"></i>Facebook : RobertAdinata</p>
+            </div>
+          <div class="image-footer">
+            <div>
+          <img src="kantor.png" alt="Kantor" width="450px" height="auto" class="kantor">
+          </div>
+        </section>
+      </footer>
+</body>
+</html>
